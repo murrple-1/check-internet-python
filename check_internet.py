@@ -25,16 +25,19 @@ def main():
 
     args = parser.parse_args()
 
-    while not internet_on(args.reference_url, args.timeout):
-        print('Internet Down...', file=sys.stderr)
-        print(
-            'Sleeping for {} seconds'.format(
-                args.sleep_timeout),
-            file=sys.stderr)
-        time.sleep(args.sleep_timeout)
+    try:
+        while not internet_on(args.reference_url, args.timeout):
+            print('Internet Down...', file=sys.stderr)
+            print(
+                'Sleeping for {} seconds'.format(
+                    args.sleep_timeout),
+                file=sys.stderr)
+            time.sleep(args.sleep_timeout)
 
-    print('\a')
-    print('Internet back up!', file=sys.stderr)
+        print('\a')
+        print('Internet back up!', file=sys.stderr)
+    except KeyboardInterrupt:
+        pass
 
 
 if __name__ == '__main__':
