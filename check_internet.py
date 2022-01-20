@@ -19,7 +19,7 @@ def main():
     parser.add_argument(
         '-r',
         '--reference-url',
-        default='http://216.58.192.142')
+        default='http://142.250.188.46')
     parser.add_argument('-t', '--timeout', type=float, default=1)
     parser.add_argument('-s', '--sleep-timeout', type=float, default=5)
 
