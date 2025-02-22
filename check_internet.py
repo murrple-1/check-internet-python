@@ -18,7 +18,7 @@ def internet_on(reference_url: str, timeout: float):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-r", "--reference-url", default="http://142.250.188.46")
+    parser.add_argument("-r", "--reference-url", default="http://142.251.41.78")
     parser.add_argument("-t", "--timeout", type=float, default=1)
     parser.add_argument("-s", "--sleep-timeout", type=float, default=5)
 
